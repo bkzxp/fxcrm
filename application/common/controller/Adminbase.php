@@ -36,15 +36,7 @@ class Adminbase extends Base
             //是否超级管理员
             if (!$this->AdminUser_model->isAdministrator()) {
                 //检测访问权限
-
-
-
                 $rule = strtolower($this->request->module() . '/' . $this->request->controller() . '/' . $this->request->action());
-
-                PRINTRpre($rule, false);
-                print_r(UID);
-                die;
-
                 if (!$this->checkRule($rule, [1, 2])) {
                     $this->error('未授权访问!');
                 }
