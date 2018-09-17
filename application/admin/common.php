@@ -51,3 +51,15 @@ function genRandomString($len = 6)
     }
     return $output;
 }
+
+/**
+ * @param $info 打印的变量信息
+ * @param bool $isdie 是否结束程序 默认结束
+ */
+function PRINTRpre($info, $isdie = true){
+    print_r('<pre>');
+    print_r($info);
+    if($isdie){
+        die;
+    }
+}
