@@ -23,7 +23,6 @@ class Main extends Adminbase
     public function index()
     {
         $this->assign('userInfo', $this->_userinfo);
-        $this->assign('sys_info', $this->get_sys_info());
         return $this->fetch();
     }
 
