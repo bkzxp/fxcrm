@@ -1,0 +1,1100 @@
+---------------------------------------------------------------
+[ 2018-09-17T09:13:45+08:00 ] ::1 GET cms.com/
+[运行时间：0.423324s] [吞吐率：2.36req/s] [内存消耗：3,397.42kb] [文件加载：60]
+[ info ] [ LANG ] E:\wamp64\wamp64\www\cms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'cms.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'pgv_pvi=4670156800',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[ 2018-09-17T09:13:50+08:00 ] ::1 GET cms.com/admin
+[运行时间：0.305701s] [吞吐率：3.27req/s] [内存消耗：4,461.38kb] [文件加载：80]
+[ info ] [ LANG ] E:\wamp64\wamp64\www\cms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'cms.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'pgv_pvi=4670156800; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  '/admin' => '',
+)
+[ info ] [ VIEW ] E:\wamp64\wamp64\www\cms\thinkphp\tpl/dispatch_jump.tpl [ array (
+  0 => 'Config',
+  1 => 'code',
+  2 => 'msg',
+  3 => 'data',
+  4 => 'url',
+  5 => 'wait',
+) ]
+---------------------------------------------------------------
+[ 2018-09-17T09:13:53+08:00 ] ::1 GET cms.com/admin/login/index.html
+[运行时间：0.059153s] [吞吐率：16.91req/s] [内存消耗：4,374.43kb] [文件加载：74]
+[ info ] [ LANG ] E:\wamp64\wamp64\www\cms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'cms.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://cms.com/admin',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'pgv_pvi=4670156800; thinkphp_show_page_trace=0|0; PHPSESSID=ovdu3363s4s25ge9egbi5f6er0',
+)
+[ info ] [ PARAM ] array (
+  '/admin/login/index_html' => '',
+)
+[ info ] [ VIEW ] E:\wamp64\wamp64\www\cms\application\admin\view\login\index.html [ array (
+) ]
+---------------------------------------------------------------
+[ 2018-09-17T09:13:54+08:00 ] ::1 GET cms.com/api/checkcode/getverify/font_size/18/imageW/130/imageH/38.html
+[运行时间：0.150139s] [吞吐率：6.66req/s] [内存消耗：3,637.66kb] [文件加载：66]
+[ info ] [ LANG ] E:\wamp64\wamp64\www\cms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'cms.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://cms.com/admin/login/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'pgv_pvi=4670156800; thinkphp_show_page_trace=0|0; PHPSESSID=ovdu3363s4s25ge9egbi5f6er0',
+)
+[ info ] [ PARAM ] array (
+  '/api/checkcode/getverify/font_size/18/imageW/130/imageH/38_html' => '',
+  'font_size' => '18',
+  'imageW' => '130',
+  'imageH' => '38',
+)
+---------------------------------------------------------------
+[ 2018-09-17T09:14:01+08:00 ] ::1 POST cms.com/admin/login/index.html
+[运行时间：0.227037s] [吞吐率：4.40req/s] [内存消耗：6,157.90kb] [文件加载：80]
+[ info ] [ LANG ] E:\wamp64\wamp64\www\cms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'cms.com',
+  'connection' => 'keep-alive',
+  'content-length' => '41',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://cms.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://cms.com/admin/login/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=4670156800; thinkphp_show_page_trace=0|0; PHPSESSID=ovdu3363s4s25ge9egbi5f6er0',
+)
+[ info ] [ PARAM ] array (
+  '/admin/login/index_html' => '',
+  'username' => 'admin',
+  'password' => 'admin',
+  'verify' => 'qjdk',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.039588s ] mysql:host=127.0.0.1;dbname=yzncms;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yzn_admin` [ RunTime:0.061487s ]
+[ sql ] [ SQL ] SELECT * FROM `yzn_admin` WHERE  `username` = 'admin' LIMIT 1 [ RunTime:0.002967s ]
+[ sql ] [ SQL ] UPDATE `yzn_admin`  SET `last_login_time` = 1537146841 , `last_login_ip` = 0  WHERE  `userid` = 1 [ RunTime:0.002261s ]
+---------------------------------------------------------------
+[ 2018-09-17T09:14:02+08:00 ] ::1 GET cms.com/admin/index/index.html
+[运行时间：0.208801s] [吞吐率：4.79req/s] [内存消耗：6,770.96kb] [文件加载：88]
+[ info ] [ LANG ] E:\wamp64\wamp64\www\cms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'cms.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://cms.com/admin/login/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'pgv_pvi=4670156800; thinkphp_show_page_trace=0|0; PHPSESSID=ovdu3363s4s25ge9egbi5f6er0',
+)
+[ info ] [ PARAM ] array (
+  '/admin/index/index_html' => '',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\wamp64\wamp64\www\cms\application\admin\view\index\index.html [ array (
+  0 => 'Config',
+  1 => 'userInfo',
+  2 => 'SUBMENU_CONFIG',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010327s ] mysql:host=127.0.0.1;dbname=yzncms;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yzn_admin` [ RunTime:0.001157s ]
+[ sql ] [ SQL ] SELECT * FROM `yzn_admin` WHERE  `userid` = 1 LIMIT 1 [ RunTime:0.000527s ]
+[ sql ] [ SQL ] SELECT * FROM `yzn_admin` WHERE  `userid` = 1 LIMIT 1 [ RunTime:0.000537s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yzn_menu` [ RunTime:0.040076s ]
+[ sql ] [ SQL ] SELECT * FROM `yzn_menu` WHERE  `parentid` = 0  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.000813s ]
+[ sql ] [ SQL ] SELECT * FROM `yzn_menu` WHERE  `parentid` = 1  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.000832s ]
+[ sql ] [ SQL ] SELECT * FROM `yzn_menu` WHERE  `parentid` = 3  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.000670s ]
+[ sql ] [ SQL ] SELECT * FROM `yzn_menu` WHERE  `parentid` = 10  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.000691s ]
+[ sql ] [ SQL ] SELECT * FROM `yzn_menu` WHERE  `parentid` = 11  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.000696s ]
+[ sql ] [ SQL ] SELECT * FROM `yzn_menu` WHERE  `parentid` = 13  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.000657s ]
+[ sql ] [ SQL ] SELECT * FROM `yzn_menu` WHERE  `parentid` = 14  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.000669s ]
+[ sql ] [ SQL ] SELECT * FROM `yzn_menu` WHERE  `parentid` = 15  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.000658s ]
+[ sql ] [ SQL ] SELECT * FROM `yzn_menu` WHERE  `parentid` = 16  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.000597s ]
+[ sql ] [ SQL ] SELECT * FROM `yzn_menu` WHERE  `parentid` = 17  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.000579s ]
+---------------------------------------------------------------
+[ 2018-09-17T09:14:02+08:00 ] ::1 GET cms.com/admin/main/index.html
+[运行时间：0.111790s] [吞吐率：8.95req/s] [内存消耗：6,067.88kb] [文件加载：81]
+[ info ] [ LANG ] E:\wamp64\wamp64\www\cms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'cms.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://cms.com/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'pgv_pvi=4670156800; thinkphp_show_page_trace=0|0; PHPSESSID=ovdu3363s4s25ge9egbi5f6er0',
+)
+[ info ] [ PARAM ] array (
+  '/admin/main/index_html' => '',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\wamp64\wamp64\www\cms\application\admin\view\main\index.html [ array (
+  0 => 'Config',
+  1 => 'userInfo',
+  2 => 'sys_info',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010261s ] mysql:host=127.0.0.1;dbname=yzncms;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yzn_admin` [ RunTime:0.001014s ]
+[ sql ] [ SQL ] SELECT * FROM `yzn_admin` WHERE  `userid` = 1 LIMIT 1 [ RunTime:0.000609s ]
+[ sql ] [ SQL ] SELECT * FROM `yzn_admin` WHERE  `userid` = 1 LIMIT 1 [ RunTime:0.000833s ]
+[ sql ] [ SQL ] SELECT VERSION() as version [ RunTime:0.000501s ]
+---------------------------------------------------------------
+[ 2018-09-17T09:16:08+08:00 ] ::1 GET cms.com/admin/manager/index/menuid/16.html
+[运行时间：0.481834s] [吞吐率：2.08req/s] [内存消耗：6,289.25kb] [文件加载：84]
+[ info ] [ LANG ] E:\wamp64\wamp64\www\cms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'cms.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://cms.com/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'pgv_pvi=4670156800; thinkphp_show_page_trace=0|0; PHPSESSID=ovdu3363s4s25ge9egbi5f6er0',
+)
+[ info ] [ PARAM ] array (
+  '/admin/manager/index/menuid/16_html' => '',
+  'menuid' => '16',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\wamp64\wamp64\www\cms\application\admin\view\manager\index.html [ array (
+  0 => 'Config',
+  1 => 'Userlist',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010241s ] mysql:host=127.0.0.1;dbname=yzncms;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yzn_admin` [ RunTime:0.001343s ]
+[ sql ] [ SQL ] SELECT * FROM `yzn_admin` WHERE  `userid` = 1 LIMIT 1 [ RunTime:0.000619s ]
+[ sql ] [ SQL ] SELECT * FROM `yzn_admin` WHERE  `userid` = 1 LIMIT 1 [ RunTime:0.000692s ]
+[ sql ] [ SQL ] SELECT * FROM `yzn_admin` ORDER BY `userid` ASC [ RunTime:0.000529s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yzn_auth_group` [ RunTime:0.031416s ]
+[ sql ] [ SQL ] SELECT `title` FROM `yzn_auth_group` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001055s ]
+[ sql ] [ SQL ] SELECT `title` FROM `yzn_auth_group` WHERE  `id` = 4 LIMIT 1 [ RunTime:0.000886s ]
+---------------------------------------------------------------
+[ 2018-09-17T09:16:14+08:00 ] ::1 GET cms.com/admin/manager/add.html
+[运行时间：0.183907s] [吞吐率：5.44req/s] [内存消耗：6,459.45kb] [文件加载：86]
+[ info ] [ LANG ] E:\wamp64\wamp64\www\cms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'cms.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://cms.com/admin/manager/index/menuid/16.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'pgv_pvi=4670156800; thinkphp_show_page_trace=0|0; PHPSESSID=ovdu3363s4s25ge9egbi5f6er0',
+)
+[ info ] [ PARAM ] array (
+  '/admin/manager/add_html' => '',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\wamp64\wamp64\www\cms\application\admin\view\manager\add.html [ array (
+  0 => 'Config',
+  1 => 'roles',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010946s ] mysql:host=127.0.0.1;dbname=yzncms;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yzn_admin` [ RunTime:0.001455s ]
+[ sql ] [ SQL ] SELECT * FROM `yzn_admin` WHERE  `userid` = 1 LIMIT 1 [ RunTime:0.000657s ]
+[ sql ] [ SQL ] SELECT * FROM `yzn_admin` WHERE  `userid` = 1 LIMIT 1 [ RunTime:0.000528s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yzn_auth_group` [ RunTime:0.000909s ]
+[ sql ] [ SQL ] SELECT * FROM `yzn_auth_group` WHERE  `status` = 1  AND `type` = 1  AND `module` = 'admin' [ RunTime:0.000643s ]
+---------------------------------------------------------------
+[ 2018-09-17T09:17:24+08:00 ] ::1 GET cms.com/admin/config/index/menuid/11.html
+[运行时间：0.480541s] [吞吐率：2.08req/s] [内存消耗：6,366.40kb] [文件加载：84]
+[ info ] [ LANG ] E:\wamp64\wamp64\www\cms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'cms.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://cms.com/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'pgv_pvi=4670156800; thinkphp_show_page_trace=0|0; PHPSESSID=ovdu3363s4s25ge9egbi5f6er0',
+)
+[ info ] [ PARAM ] array (
+  '/admin/config/index/menuid/11_html' => '',
+  'menuid' => '11',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\wamp64\wamp64\www\cms\application\admin\view\config\index.html [ array (
+  0 => 'Config',
+  1 => 'list',
+  2 => 'groupArray',
+  3 => 'group',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010187s ] mysql:host=127.0.0.1;dbname=yzncms;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yzn_admin` [ RunTime:0.001064s ]
+[ sql ] [ SQL ] SELECT * FROM `yzn_admin` WHERE  `userid` = 1 LIMIT 1 [ RunTime:0.000558s ]
+[ sql ] [ SQL ] SELECT * FROM `yzn_admin` WHERE  `userid` = 1 LIMIT 1 [ RunTime:0.000491s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yzn_config` [ RunTime:0.360115s ]
+[ sql ] [ SQL ] SELECT `config`.`id`,`config`.`name`,`config`.`title`,`config`.`type`,`config`.`listorder`,`config`.`status`,`config`.`update_time`,field_type.title as ftitle FROM `yzn_config` `config` LEFT JOIN `yzn_field_type` `field_type` ON `field_type`.`name`=`config`.`type` WHERE  `group` = 'base' ORDER BY `config`.`listorder` ASC,`config`.`id` DESC [ RunTime:0.018353s ]
+---------------------------------------------------------------
+[ 2018-09-17T09:17:24+08:00 ] ::1 GET cms.com/admin/config/setting/menuid/13.html
+[运行时间：0.086530s] [吞吐率：11.56req/s] [内存消耗：6,360.86kb] [文件加载：84]
+[ info ] [ LANG ] E:\wamp64\wamp64\www\cms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'cms.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://cms.com/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'pgv_pvi=4670156800; thinkphp_show_page_trace=0|0; PHPSESSID=ovdu3363s4s25ge9egbi5f6er0',
+)
+[ info ] [ PARAM ] array (
+  '/admin/config/setting/menuid/13_html' => '',
+  'menuid' => '13',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\wamp64\wamp64\www\cms\application\admin\view\config\setting.html [ array (
+  0 => 'Config',
+  1 => 'groupArray',
+  2 => 'fieldList',
+  3 => 'group',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011550s ] mysql:host=127.0.0.1;dbname=yzncms;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yzn_admin` [ RunTime:0.001021s ]
+[ sql ] [ SQL ] SELECT * FROM `yzn_admin` WHERE  `userid` = 1 LIMIT 1 [ RunTime:0.000551s ]
+[ sql ] [ SQL ] SELECT * FROM `yzn_admin` WHERE  `userid` = 1 LIMIT 1 [ RunTime:0.000504s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yzn_config` [ RunTime:0.000877s ]
+[ sql ] [ SQL ] SELECT `name`,`title`,`remark`,`type`,`value`,`options` FROM `yzn_config` WHERE  `group` = 'base'  AND `status` = 1 ORDER BY `listorder`,`id` DESC [ RunTime:0.000570s ]
+---------------------------------------------------------------
+[ 2018-09-17T09:17:26+08:00 ] ::1 GET cms.com/admin/menu/index/menuid/14.html
+[运行时间：0.082084s] [吞吐率：12.18req/s] [内存消耗：6,389.46kb] [文件加载：85]
+[ info ] [ LANG ] E:\wamp64\wamp64\www\cms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'cms.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://cms.com/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'pgv_pvi=4670156800; thinkphp_show_page_trace=0|0; PHPSESSID=ovdu3363s4s25ge9egbi5f6er0',
+)
+[ info ] [ PARAM ] array (
+  '/admin/menu/index/menuid/14_html' => '',
+  'menuid' => '14',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\wamp64\wamp64\www\cms\application\admin\view\menu\index.html [ array (
+  0 => 'Config',
+  1 => 'categorys',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001186s ] mysql:host=127.0.0.1;dbname=yzncms;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yzn_admin` [ RunTime:0.001017s ]
+[ sql ] [ SQL ] SELECT * FROM `yzn_admin` WHERE  `userid` = 1 LIMIT 1 [ RunTime:0.000564s ]
+[ sql ] [ SQL ] SELECT * FROM `yzn_admin` WHERE  `userid` = 1 LIMIT 1 [ RunTime:0.000526s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yzn_menu` [ RunTime:0.001078s ]
+[ sql ] [ SQL ] SELECT * FROM `yzn_menu` ORDER BY `listorder`,`id` DESC [ RunTime:0.000602s ]
+---------------------------------------------------------------
+[ 2018-09-17T09:17:27+08:00 ] ::1 GET cms.com/admin/manager/index/menuid/16.html
+[运行时间：0.078612s] [吞吐率：12.72req/s] [内存消耗：6,289.69kb] [文件加载：84]
+[ info ] [ LANG ] E:\wamp64\wamp64\www\cms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'cms.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://cms.com/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; pgv_pvi=4670156800; thinkphp_show_page_trace=0|0; PHPSESSID=ovdu3363s4s25ge9egbi5f6er0',
+)
+[ info ] [ PARAM ] array (
+  '/admin/manager/index/menuid/16_html' => '',
+  'menuid' => '16',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\wamp64\wamp64\www\cms\application\admin\view\manager\index.html [ array (
+  0 => 'Config',
+  1 => 'Userlist',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010607s ] mysql:host=127.0.0.1;dbname=yzncms;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yzn_admin` [ RunTime:0.001298s ]
+[ sql ] [ SQL ] SELECT * FROM `yzn_admin` WHERE  `userid` = 1 LIMIT 1 [ RunTime:0.000958s ]
+[ sql ] [ SQL ] SELECT * FROM `yzn_admin` WHERE  `userid` = 1 LIMIT 1 [ RunTime:0.000510s ]
+[ sql ] [ SQL ] SELECT * FROM `yzn_admin` ORDER BY `userid` ASC [ RunTime:0.000481s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yzn_auth_group` [ RunTime:0.001284s ]
+[ sql ] [ SQL ] SELECT `title` FROM `yzn_auth_group` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000598s ]
+[ sql ] [ SQL ] SELECT `title` FROM `yzn_auth_group` WHERE  `id` = 4 LIMIT 1 [ RunTime:0.000464s ]
+---------------------------------------------------------------
+[ 2018-09-17T09:17:30+08:00 ] ::1 GET cms.com/admin/manager/add.html
+[运行时间：0.080388s] [吞吐率：12.44req/s] [内存消耗：6,459.72kb] [文件加载：86]
+[ info ] [ LANG ] E:\wamp64\wamp64\www\cms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'cms.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://cms.com/admin/manager/index/menuid/16.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=4670156800; thinkphp_show_page_trace=0|0; PHPSESSID=ovdu3363s4s25ge9egbi5f6er0',
+)
+[ info ] [ PARAM ] array (
+  '/admin/manager/add_html' => '',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\wamp64\wamp64\www\cms\application\admin\view\manager\add.html [ array (
+  0 => 'Config',
+  1 => 'roles',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010310s ] mysql:host=127.0.0.1;dbname=yzncms;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yzn_admin` [ RunTime:0.001380s ]
+[ sql ] [ SQL ] SELECT * FROM `yzn_admin` WHERE  `userid` = 1 LIMIT 1 [ RunTime:0.000696s ]
+[ sql ] [ SQL ] SELECT * FROM `yzn_admin` WHERE  `userid` = 1 LIMIT 1 [ RunTime:0.000565s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yzn_auth_group` [ RunTime:0.001337s ]
+[ sql ] [ SQL ] SELECT * FROM `yzn_auth_group` WHERE  `status` = 1  AND `type` = 1  AND `module` = 'admin' [ RunTime:0.000620s ]
+---------------------------------------------------------------
+[ 2018-09-17T09:18:12+08:00 ] ::1 GET cms.com/admin/manager/index/menuid/16.html
+[运行时间：0.074030s] [吞吐率：13.51req/s] [内存消耗：6,289.69kb] [文件加载：84]
+[ info ] [ LANG ] E:\wamp64\wamp64\www\cms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'cms.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://cms.com/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; pgv_pvi=4670156800; thinkphp_show_page_trace=0|0; PHPSESSID=ovdu3363s4s25ge9egbi5f6er0',
+)
+[ info ] [ PARAM ] array (
+  '/admin/manager/index/menuid/16_html' => '',
+  'menuid' => '16',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\wamp64\wamp64\www\cms\application\admin\view\manager\index.html [ array (
+  0 => 'Config',
+  1 => 'Userlist',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010299s ] mysql:host=127.0.0.1;dbname=yzncms;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yzn_admin` [ RunTime:0.001366s ]
+[ sql ] [ SQL ] SELECT * FROM `yzn_admin` WHERE  `userid` = 1 LIMIT 1 [ RunTime:0.000631s ]
+[ sql ] [ SQL ] SELECT * FROM `yzn_admin` WHERE  `userid` = 1 LIMIT 1 [ RunTime:0.000487s ]
+[ sql ] [ SQL ] SELECT * FROM `yzn_admin` ORDER BY `userid` ASC [ RunTime:0.000492s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yzn_auth_group` [ RunTime:0.000980s ]
+[ sql ] [ SQL ] SELECT `title` FROM `yzn_auth_group` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000486s ]
+[ sql ] [ SQL ] SELECT `title` FROM `yzn_auth_group` WHERE  `id` = 4 LIMIT 1 [ RunTime:0.000441s ]
+---------------------------------------------------------------
+[ 2018-09-17T09:46:08+08:00 ] 192.168.88.1 GET fxcrm.tb.yake.net/public/
+[运行时间：0.507713s] [吞吐率：1.97req/s] [内存消耗：2,481.49kb] [文件加载：62]
+[ info ] [ LANG ] /tb/fxcrm/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'fxcrm.tb.yake.net',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://fxcrm.tb.yake.net/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[ 2018-09-17T09:47:21+08:00 ] 192.168.88.1 GET fxcrm.tb.yake.net/
+[运行时间：0.112130s] [吞吐率：8.92req/s] [内存消耗：2,481.59kb] [文件加载：62]
+[ info ] [ LANG ] /tb/fxcrm/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'fxcrm.tb.yake.net',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=9473337344; pgv_si=s4802075648',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[ 2018-09-17T09:48:58+08:00 ] 192.168.88.1 GET fxcrm.tb.yake.net/admin
+[运行时间：0.174884s] [吞吐率：5.72req/s] [内存消耗：3,464.05kb] [文件加载：84]
+[ info ] [ LANG ] /tb/fxcrm/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'fxcrm.tb.yake.net',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=9473337344; pgv_si=s4802075648; thinkphp_show_page_trace=0|0',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] /tb/fxcrm/thinkphp/tpl/dispatch_jump.tpl [ array (
+  0 => 'Config',
+  1 => 'code',
+  2 => 'msg',
+  3 => 'data',
+  4 => 'url',
+  5 => 'wait',
+) ]
+---------------------------------------------------------------
+[ 2018-09-17T09:49:01+08:00 ] 192.168.88.1 GET fxcrm.tb.yake.net/admin/login/index.html
+[运行时间：0.149014s] [吞吐率：6.71req/s] [内存消耗：3,392.71kb] [文件加载：78]
+[ info ] [ LANG ] /tb/fxcrm/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'fxcrm.tb.yake.net',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://fxcrm.tb.yake.net/admin',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=9473337344; pgv_si=s4802075648; thinkphp_show_page_trace=0|0; PHPSESSID=86mhtgvrqk9lim3g8k4h08n6v7',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] /tb/fxcrm/application/admin/view/login/index.html [ array (
+) ]
+---------------------------------------------------------------
+[ 2018-09-17T09:49:02+08:00 ] 192.168.88.1 GET fxcrm.tb.yake.net/api/checkcode/getverify/font_size/18/imageW/130/imageH/38.html
+[运行时间：0.148965s] [吞吐率：6.71req/s] [内存消耗：2,675.81kb] [文件加载：68]
+[ info ] [ LANG ] /tb/fxcrm/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'fxcrm.tb.yake.net',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://fxcrm.tb.yake.net/admin/login/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=9473337344; pgv_si=s4802075648; thinkphp_show_page_trace=0|0; PHPSESSID=86mhtgvrqk9lim3g8k4h08n6v7',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'font_size' => '18',
+  'imageW' => '130',
+  'imageH' => '38',
+)
+---------------------------------------------------------------
+[ 2018-09-17T09:49:12+08:00 ] 192.168.88.1 GET fxcrm.tb.yake.net/api/checkcode/getverify/font_size/18/imageW/130/imageH/38.html?0.1494068403162494
+[运行时间：0.099049s] [吞吐率：10.10req/s] [内存消耗：2,676.04kb] [文件加载：68]
+[ info ] [ LANG ] /tb/fxcrm/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'fxcrm.tb.yake.net',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://fxcrm.tb.yake.net/admin/login/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=9473337344; pgv_si=s4802075648; thinkphp_show_page_trace=0|0; PHPSESSID=86mhtgvrqk9lim3g8k4h08n6v7',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  '0_1494068403162494' => '',
+  'font_size' => '18',
+  'imageW' => '130',
+  'imageH' => '38',
+)
+---------------------------------------------------------------
+[ 2018-09-17T09:49:13+08:00 ] 192.168.88.1 GET fxcrm.tb.yake.net/api/checkcode/getverify/font_size/18/imageW/130/imageH/38.html?0.8569974656163288
+[运行时间：0.091711s] [吞吐率：10.90req/s] [内存消耗：2,675.98kb] [文件加载：68]
+[ info ] [ LANG ] /tb/fxcrm/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'fxcrm.tb.yake.net',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://fxcrm.tb.yake.net/admin/login/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=9473337344; pgv_si=s4802075648; thinkphp_show_page_trace=0|0; PHPSESSID=86mhtgvrqk9lim3g8k4h08n6v7',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  '0_8569974656163288' => '',
+  'font_size' => '18',
+  'imageW' => '130',
+  'imageH' => '38',
+)
+---------------------------------------------------------------
+[ 2018-09-17T09:49:19+08:00 ] 192.168.88.1 POST fxcrm.tb.yake.net/admin/login/index.html
+[运行时间：0.128241s] [吞吐率：7.80req/s] [内存消耗：4,455.36kb] [文件加载：81]
+[ info ] [ LANG ] /tb/fxcrm/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'fxcrm.tb.yake.net',
+  'connection' => 'keep-alive',
+  'content-length' => '41',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://fxcrm.tb.yake.net',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://fxcrm.tb.yake.net/admin/login/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=9473337344; pgv_si=s4802075648; thinkphp_show_page_trace=0|0; PHPSESSID=86mhtgvrqk9lim3g8k4h08n6v7',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'admin',
+  'password' => 'admin',
+  'verify' => 'uwcm',
+)
+[ info ] [ DB ] INIT mysql
+[ error ] [2002]SQLSTATE[HY000] [2002] Connection refused[/tb/fxcrm/thinkphp/library/think/db/Connection.php:525]
+---------------------------------------------------------------
+[ 2018-09-17T09:49:21+08:00 ] 192.168.88.1 POST fxcrm.tb.yake.net/admin/login/index.html
+[运行时间：0.123557s] [吞吐率：8.09req/s] [内存消耗：4,455.36kb] [文件加载：81]
+[ info ] [ LANG ] /tb/fxcrm/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'fxcrm.tb.yake.net',
+  'connection' => 'keep-alive',
+  'content-length' => '41',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://fxcrm.tb.yake.net',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://fxcrm.tb.yake.net/admin/login/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=9473337344; pgv_si=s4802075648; thinkphp_show_page_trace=0|0; PHPSESSID=86mhtgvrqk9lim3g8k4h08n6v7',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'admin',
+  'password' => 'admin',
+  'verify' => 'uwcm',
+)
+[ info ] [ DB ] INIT mysql
+[ error ] [2002]SQLSTATE[HY000] [2002] Connection refused[/tb/fxcrm/thinkphp/library/think/db/Connection.php:525]
+---------------------------------------------------------------
+[ 2018-09-17T09:49:21+08:00 ] 192.168.88.1 POST fxcrm.tb.yake.net/admin/login/index.html
+[运行时间：0.127918s] [吞吐率：7.82req/s] [内存消耗：4,455.36kb] [文件加载：81]
+[ info ] [ LANG ] /tb/fxcrm/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'fxcrm.tb.yake.net',
+  'connection' => 'keep-alive',
+  'content-length' => '41',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://fxcrm.tb.yake.net',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://fxcrm.tb.yake.net/admin/login/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=9473337344; pgv_si=s4802075648; thinkphp_show_page_trace=0|0; PHPSESSID=86mhtgvrqk9lim3g8k4h08n6v7',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'admin',
+  'password' => 'admin',
+  'verify' => 'uwcm',
+)
+[ info ] [ DB ] INIT mysql
+[ error ] [2002]SQLSTATE[HY000] [2002] Connection refused[/tb/fxcrm/thinkphp/library/think/db/Connection.php:525]
+---------------------------------------------------------------
+[ 2018-09-17T09:49:22+08:00 ] 192.168.88.1 POST fxcrm.tb.yake.net/admin/login/index.html
+[运行时间：0.159209s] [吞吐率：6.28req/s] [内存消耗：4,455.36kb] [文件加载：81]
+[ info ] [ LANG ] /tb/fxcrm/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'fxcrm.tb.yake.net',
+  'connection' => 'keep-alive',
+  'content-length' => '41',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://fxcrm.tb.yake.net',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://fxcrm.tb.yake.net/admin/login/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=9473337344; pgv_si=s4802075648; thinkphp_show_page_trace=0|0; PHPSESSID=86mhtgvrqk9lim3g8k4h08n6v7',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'admin',
+  'password' => 'admin',
+  'verify' => 'uwcm',
+)
+[ info ] [ DB ] INIT mysql
+[ error ] [2002]SQLSTATE[HY000] [2002] Connection refused[/tb/fxcrm/thinkphp/library/think/db/Connection.php:525]
+---------------------------------------------------------------
+[ 2018-09-17T09:49:22+08:00 ] 192.168.88.1 POST fxcrm.tb.yake.net/admin/login/index.html
+[运行时间：0.222969s] [吞吐率：4.48req/s] [内存消耗：4,455.36kb] [文件加载：81]
+[ info ] [ LANG ] /tb/fxcrm/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'fxcrm.tb.yake.net',
+  'connection' => 'keep-alive',
+  'content-length' => '41',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://fxcrm.tb.yake.net',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://fxcrm.tb.yake.net/admin/login/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=9473337344; pgv_si=s4802075648; thinkphp_show_page_trace=0|0; PHPSESSID=86mhtgvrqk9lim3g8k4h08n6v7',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'admin',
+  'password' => 'admin',
+  'verify' => 'uwcm',
+)
+[ info ] [ DB ] INIT mysql
+[ error ] [2002]SQLSTATE[HY000] [2002] Connection refused[/tb/fxcrm/thinkphp/library/think/db/Connection.php:525]
+---------------------------------------------------------------
+[ 2018-09-17T09:49:22+08:00 ] 192.168.88.1 POST fxcrm.tb.yake.net/admin/login/index.html
+[运行时间：0.223774s] [吞吐率：4.47req/s] [内存消耗：4,455.36kb] [文件加载：81]
+[ info ] [ LANG ] /tb/fxcrm/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'fxcrm.tb.yake.net',
+  'connection' => 'keep-alive',
+  'content-length' => '41',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://fxcrm.tb.yake.net',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://fxcrm.tb.yake.net/admin/login/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=9473337344; pgv_si=s4802075648; thinkphp_show_page_trace=0|0; PHPSESSID=86mhtgvrqk9lim3g8k4h08n6v7',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'admin',
+  'password' => 'admin',
+  'verify' => 'uwcm',
+)
+[ info ] [ DB ] INIT mysql
+[ error ] [2002]SQLSTATE[HY000] [2002] Connection refused[/tb/fxcrm/thinkphp/library/think/db/Connection.php:525]
+---------------------------------------------------------------
+[ 2018-09-17T09:49:22+08:00 ] 192.168.88.1 POST fxcrm.tb.yake.net/admin/login/index.html
+[运行时间：0.194663s] [吞吐率：5.14req/s] [内存消耗：4,455.36kb] [文件加载：81]
+[ info ] [ LANG ] /tb/fxcrm/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'fxcrm.tb.yake.net',
+  'connection' => 'keep-alive',
+  'content-length' => '41',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://fxcrm.tb.yake.net',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://fxcrm.tb.yake.net/admin/login/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=9473337344; pgv_si=s4802075648; thinkphp_show_page_trace=0|0; PHPSESSID=86mhtgvrqk9lim3g8k4h08n6v7',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'admin',
+  'password' => 'admin',
+  'verify' => 'uwcm',
+)
+[ info ] [ DB ] INIT mysql
+[ error ] [2002]SQLSTATE[HY000] [2002] Connection refused[/tb/fxcrm/thinkphp/library/think/db/Connection.php:525]
+---------------------------------------------------------------
+[ 2018-09-17T09:50:15+08:00 ] 192.168.88.1 POST fxcrm.tb.yake.net/admin/login/index.html
+[运行时间：0.142976s] [吞吐率：6.99req/s] [内存消耗：4,456.34kb] [文件加载：81]
+[ info ] [ LANG ] /tb/fxcrm/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'fxcrm.tb.yake.net',
+  'connection' => 'keep-alive',
+  'content-length' => '41',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://fxcrm.tb.yake.net',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://fxcrm.tb.yake.net/admin/login/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=9473337344; pgv_si=s4802075648; thinkphp_show_page_trace=0|0; PHPSESSID=86mhtgvrqk9lim3g8k4h08n6v7',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'admin',
+  'password' => 'admin',
+  'verify' => 'uwcm',
+)
+[ info ] [ DB ] INIT mysql
+[ error ] [2002]SQLSTATE[HY000] [2002] No such file or directory[/tb/fxcrm/thinkphp/library/think/db/Connection.php:525]
+---------------------------------------------------------------
+[ 2018-09-17T09:50:16+08:00 ] 192.168.88.1 POST fxcrm.tb.yake.net/admin/login/index.html
+[运行时间：0.124212s] [吞吐率：8.05req/s] [内存消耗：4,455.39kb] [文件加载：81]
+[ info ] [ LANG ] /tb/fxcrm/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'fxcrm.tb.yake.net',
+  'connection' => 'keep-alive',
+  'content-length' => '41',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://fxcrm.tb.yake.net',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://fxcrm.tb.yake.net/admin/login/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=9473337344; pgv_si=s4802075648; thinkphp_show_page_trace=0|0; PHPSESSID=86mhtgvrqk9lim3g8k4h08n6v7',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'admin',
+  'password' => 'admin',
+  'verify' => 'uwcm',
+)
+[ info ] [ DB ] INIT mysql
+[ error ] [2002]SQLSTATE[HY000] [2002] No such file or directory[/tb/fxcrm/thinkphp/library/think/db/Connection.php:525]
+---------------------------------------------------------------
+[ 2018-09-17T09:50:17+08:00 ] 192.168.88.1 POST fxcrm.tb.yake.net/admin/login/index.html
+[运行时间：0.107569s] [吞吐率：9.30req/s] [内存消耗：4,455.39kb] [文件加载：81]
+[ info ] [ LANG ] /tb/fxcrm/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'fxcrm.tb.yake.net',
+  'connection' => 'keep-alive',
+  'content-length' => '41',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://fxcrm.tb.yake.net',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://fxcrm.tb.yake.net/admin/login/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=9473337344; pgv_si=s4802075648; thinkphp_show_page_trace=0|0; PHPSESSID=86mhtgvrqk9lim3g8k4h08n6v7',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'admin',
+  'password' => 'admin',
+  'verify' => 'uwcm',
+)
+[ info ] [ DB ] INIT mysql
+[ error ] [2002]SQLSTATE[HY000] [2002] No such file or directory[/tb/fxcrm/thinkphp/library/think/db/Connection.php:525]
+---------------------------------------------------------------
+[ 2018-09-17T09:50:17+08:00 ] 192.168.88.1 POST fxcrm.tb.yake.net/admin/login/index.html
+[运行时间：0.172064s] [吞吐率：5.81req/s] [内存消耗：4,455.39kb] [文件加载：81]
+[ info ] [ LANG ] /tb/fxcrm/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'fxcrm.tb.yake.net',
+  'connection' => 'keep-alive',
+  'content-length' => '41',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://fxcrm.tb.yake.net',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://fxcrm.tb.yake.net/admin/login/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=9473337344; pgv_si=s4802075648; thinkphp_show_page_trace=0|0; PHPSESSID=86mhtgvrqk9lim3g8k4h08n6v7',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'admin',
+  'password' => 'admin',
+  'verify' => 'uwcm',
+)
+[ info ] [ DB ] INIT mysql
+[ error ] [2002]SQLSTATE[HY000] [2002] No such file or directory[/tb/fxcrm/thinkphp/library/think/db/Connection.php:525]
+---------------------------------------------------------------
+[ 2018-09-17T09:50:17+08:00 ] 192.168.88.1 POST fxcrm.tb.yake.net/admin/login/index.html
+[运行时间：0.169222s] [吞吐率：5.91req/s] [内存消耗：4,455.39kb] [文件加载：81]
+[ info ] [ LANG ] /tb/fxcrm/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'fxcrm.tb.yake.net',
+  'connection' => 'keep-alive',
+  'content-length' => '41',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://fxcrm.tb.yake.net',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://fxcrm.tb.yake.net/admin/login/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=9473337344; pgv_si=s4802075648; thinkphp_show_page_trace=0|0; PHPSESSID=86mhtgvrqk9lim3g8k4h08n6v7',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'admin',
+  'password' => 'admin',
+  'verify' => 'uwcm',
+)
+[ info ] [ DB ] INIT mysql
+[ error ] [2002]SQLSTATE[HY000] [2002] No such file or directory[/tb/fxcrm/thinkphp/library/think/db/Connection.php:525]
+---------------------------------------------------------------
+[ 2018-09-17T09:50:17+08:00 ] 192.168.88.1 POST fxcrm.tb.yake.net/admin/login/index.html
+[运行时间：0.163320s] [吞吐率：6.12req/s] [内存消耗：4,455.39kb] [文件加载：81]
+[ info ] [ LANG ] /tb/fxcrm/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'fxcrm.tb.yake.net',
+  'connection' => 'keep-alive',
+  'content-length' => '41',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://fxcrm.tb.yake.net',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://fxcrm.tb.yake.net/admin/login/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=9473337344; pgv_si=s4802075648; thinkphp_show_page_trace=0|0; PHPSESSID=86mhtgvrqk9lim3g8k4h08n6v7',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'admin',
+  'password' => 'admin',
+  'verify' => 'uwcm',
+)
+[ info ] [ DB ] INIT mysql
+[ error ] [2002]SQLSTATE[HY000] [2002] No such file or directory[/tb/fxcrm/thinkphp/library/think/db/Connection.php:525]
+---------------------------------------------------------------
+[ 2018-09-17T09:50:28+08:00 ] 192.168.88.1 POST fxcrm.tb.yake.net/admin/login/index.html
+[运行时间：0.124932s] [吞吐率：8.00req/s] [内存消耗：4,455.39kb] [文件加载：81]
+[ info ] [ LANG ] /tb/fxcrm/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'fxcrm.tb.yake.net',
+  'connection' => 'keep-alive',
+  'content-length' => '41',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://fxcrm.tb.yake.net',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://fxcrm.tb.yake.net/admin/login/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=9473337344; pgv_si=s4802075648; thinkphp_show_page_trace=0|0; PHPSESSID=86mhtgvrqk9lim3g8k4h08n6v7',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'admin',
+  'password' => 'admin',
+  'verify' => 'uwcm',
+)
+[ info ] [ DB ] INIT mysql
+[ error ] [2002]SQLSTATE[HY000] [2002] No such file or directory[/tb/fxcrm/thinkphp/library/think/db/Connection.php:525]
+---------------------------------------------------------------
+[ 2018-09-17T09:52:00+08:00 ] 192.168.88.1 POST fxcrm.tb.yake.net/admin/login/index.html
+[运行时间：0.167168s] [吞吐率：5.98req/s] [内存消耗：4,522.85kb] [文件加载：82]
+[ info ] [ LANG ] /tb/fxcrm/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'fxcrm.tb.yake.net',
+  'connection' => 'keep-alive',
+  'content-length' => '41',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://fxcrm.tb.yake.net',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://fxcrm.tb.yake.net/admin/login/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=9473337344; pgv_si=s4802075648; thinkphp_show_page_trace=0|0; PHPSESSID=86mhtgvrqk9lim3g8k4h08n6v7',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'admin',
+  'password' => 'admin',
+  'verify' => 'uwcm',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004561s ] mysql:host=172.17.68.120;port=3306;dbname=fxcrm;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yzn_admin` [ RunTime:0.011149s ]
+[ sql ] [ SQL ] SELECT * FROM `yzn_admin` WHERE  `username` = 'admin' LIMIT 1 [ RunTime:0.004034s ]
+[ sql ] [ SQL ] UPDATE `yzn_admin`  SET `last_login_time` = 1537149120 , `last_login_ip` = 3232258049  WHERE  `userid` = 1 [ RunTime:0.002862s ]
+---------------------------------------------------------------
+[ 2018-09-17T09:52:01+08:00 ] 192.168.88.1 GET fxcrm.tb.yake.net/admin/index/index.html
+[运行时间：0.262830s] [吞吐率：3.80req/s] [内存消耗：4,976.25kb] [文件加载：90]
+[ info ] [ LANG ] /tb/fxcrm/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'fxcrm.tb.yake.net',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://fxcrm.tb.yake.net/admin/login/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=9473337344; pgv_si=s4802075648; thinkphp_show_page_trace=0|0; PHPSESSID=86mhtgvrqk9lim3g8k4h08n6v7',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /tb/fxcrm/application/admin/view/index/index.html [ array (
+  0 => 'Config',
+  1 => 'userInfo',
+  2 => 'SUBMENU_CONFIG',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003671s ] mysql:host=172.17.68.120;port=3306;dbname=fxcrm;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yzn_admin` [ RunTime:0.008910s ]
+[ sql ] [ SQL ] SELECT * FROM `yzn_admin` WHERE  `userid` = 1 LIMIT 1 [ RunTime:0.001714s ]
+[ sql ] [ SQL ] SELECT * FROM `yzn_admin` WHERE  `userid` = 1 LIMIT 1 [ RunTime:0.001621s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yzn_menu` [ RunTime:0.009041s ]
+[ sql ] [ SQL ] SELECT * FROM `yzn_menu` WHERE  `parentid` = 0  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.005089s ]
+[ sql ] [ SQL ] SELECT * FROM `yzn_menu` WHERE  `parentid` = 3  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.002726s ]
+[ sql ] [ SQL ] SELECT * FROM `yzn_menu` WHERE  `parentid` = 10  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.001623s ]
+[ sql ] [ SQL ] SELECT * FROM `yzn_menu` WHERE  `parentid` = 11  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.001807s ]
+[ sql ] [ SQL ] SELECT * FROM `yzn_menu` WHERE  `parentid` = 13  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.001718s ]
+[ sql ] [ SQL ] SELECT * FROM `yzn_menu` WHERE  `parentid` = 14  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.001627s ]
+[ sql ] [ SQL ] SELECT * FROM `yzn_menu` WHERE  `parentid` = 15  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.001831s ]
+[ sql ] [ SQL ] SELECT * FROM `yzn_menu` WHERE  `parentid` = 16  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.002323s ]
+[ sql ] [ SQL ] SELECT * FROM `yzn_menu` WHERE  `parentid` = 17  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.001646s ]
+[ sql ] [ SQL ] SELECT * FROM `yzn_menu` WHERE  `parentid` = 5  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.002066s ]
+---------------------------------------------------------------
+[ 2018-09-17T09:52:02+08:00 ] 192.168.88.1 GET fxcrm.tb.yake.net/admin/main/index.html
+[运行时间：0.332078s] [吞吐率：3.01req/s] [内存消耗：4,647.34kb] [文件加载：85]
+[ info ] [ LANG ] /tb/fxcrm/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'fxcrm.tb.yake.net',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://fxcrm.tb.yake.net/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=9473337344; pgv_si=s4802075648; thinkphp_show_page_trace=0|0; PHPSESSID=86mhtgvrqk9lim3g8k4h08n6v7',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /tb/fxcrm/application/admin/view/main/index.html [ array (
+  0 => 'Config',
+  1 => 'userInfo',
+  2 => 'sys_info',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001690s ] mysql:host=172.17.68.120;port=3306;dbname=fxcrm;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yzn_admin` [ RunTime:0.002927s ]
+[ sql ] [ SQL ] SELECT * FROM `yzn_admin` WHERE  `userid` = 1 LIMIT 1 [ RunTime:0.001857s ]
+[ sql ] [ SQL ] SELECT * FROM `yzn_admin` WHERE  `userid` = 1 LIMIT 1 [ RunTime:0.004513s ]
+[ sql ] [ SQL ] SELECT VERSION() as version [ RunTime:0.002088s ]

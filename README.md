@@ -1,2 +1,32 @@
-# fxcrm
-小型CRM管理系统
+### 本项目为最新项目  旧版本完整CMS 请选择分支5.0下载
+[演示地址]  
+```
+近期放出 （超级管理员：admin admin)
+```
+
+[使用教程]
+```
+手册地址 https://www.kancloud.cn/ken678/yzncms
+```
+
+[项目介绍]
+```
+Yzncms(又名御宅男cms)是完全开源的项目，基于ThinkPHP5.1.X和layui2.x最新版,框架易于功能扩展，代码维护，方便二次开发  
+帮助开发者简单高效降低二次开发成本，满足专注业务深度开发的需求。
+```
+[环境要求]
+```
+php >= 5.6 (支持php7) / MySQL >= 5.0
+Apache / Nginx / Windows / Linux
+```
+[空间要求]
+```
+服务器需支持将域名绑定public目录
+如果您的服务器不支持绑定目录 请查看public目录下的index.php入口文件 有详细具体操作
+```
+[安装教程]
+```
+第一步：修改数据库配置 根目录/config/database.php  
+第二步：将根目录的yzncms.sql文件导入数据库即可  
+第三步：后台入口 http://您的域名/admin 默认账号密码 （超级管理员：admin admin)
+```
