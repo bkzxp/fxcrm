@@ -47,7 +47,7 @@ class Manager extends Adminbase
                 return $this->error($result);
             }
             if ($this->AdminUser->createManager($data)) {
-                $this->success("添加管理员成功！", url('admin/manager/index'));
+                $this->success("添加用户成功！", url('admin/manager/index'));
             } else {
                 $error = $this->AdminUser->getError();
                 $this->error($error ? $error : '添加失败！');
