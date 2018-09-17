@@ -26,7 +26,10 @@ class Vb extends Model
      */
     final public function getList($where)
     {
-        $where = array();
+        if(!is_array($where)){
+            $where = array();
+        }
+
         $result = $this->where($where)->select()->toArray();
         return $result;
     }

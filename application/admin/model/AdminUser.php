@@ -182,7 +182,7 @@ class AdminUser extends Model
         } else {
             $map['username'] = $identifier;
         }
-        $userInfo = $this->where($map)->find();
+        $userInfo = $this->where($map)->find()->toArray();
         if (empty($userInfo)) {
             return false;
         }

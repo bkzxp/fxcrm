@@ -30,6 +30,9 @@ class Main extends Adminbase
     public function index()
     {
         $where = array();
+        if ($this->_userinfo['roleid'] != 1) {  //普通用户只能查询自己的记录
+            $where['uid'] = $this->_userinfo['userid'];
+        }
         $vblist = $this->Vb->getList($where);
         $this->assign('vblist', $vblist);
         return $this->fetch();
