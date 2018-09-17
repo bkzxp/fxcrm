@@ -50,6 +50,7 @@ class Auth
             return true;
         }
         $authList = $this->getAuthList($uid, $type); //获取用户需要验证的所有有效规则列表
+
         if (is_string($name)) {
             $name = strtolower($name);
             if (strpos($name, ',') !== false) {
@@ -62,6 +63,7 @@ class Auth
         if ($mode == 'url') {
             $REQUEST = unserialize(strtolower(serialize($_REQUEST)));
         }
+
         foreach ($authList as $auth) {
             $query = preg_replace('/^.+\?/U', '', $auth);
             if ($mode == 'url' && $query != $auth) {
@@ -76,6 +78,7 @@ class Auth
                 $list[] = $auth;
             }
         }
+
         if ($relation == 'or' and !empty($list)) {
             return true;
         }
