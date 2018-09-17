@@ -22,8 +22,8 @@ class Index extends Adminbase
     public function index()
     {
         $this->assign('userInfo', $this->_userinfo);
-        $memulist = model("admin/Menu")->getMenuList();
-        $this->assign("SUBMENU_CONFIG", json_encode($memulist));
+        $menulist = model("admin/Menu")->getMenuList();
+        $this->assign("SUBMENU_CONFIG", json_encode($menulist));
         return $this->fetch();
     }
 

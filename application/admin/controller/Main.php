@@ -14,15 +14,24 @@
 // +----------------------------------------------------------------------
 namespace app\admin\controller;
 
+use app\admin\model\Vb as Vb_Model;
 use app\common\controller\Adminbase;
 use think\Db;
 
 class Main extends Adminbase
 {
+    protected function initialize()
+    {
+        parent::initialize();
+        $this->Vb = new Vb_Model;
+    }
+
     //欢迎首页
     public function index()
     {
-        $this->assign('userInfo', $this->_userinfo);
+        $where = array();
+        $vblist = $this->Vb->getList($where);
+        $this->assign('vblist', $vblist);
         return $this->fetch();
     }
 
