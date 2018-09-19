@@ -29,6 +29,15 @@ class Main extends Adminbase
     //欢迎首页
     public function index()
     {
+        $page = 1;  //请求页
+        $pagesize = 10;  //页码大小
+        $limit = 0; //记录起始
+
+        if(isset($_POST['page']) && (int)$_POST['page'] && isset($_POST['fenye']) && $_POST['fenye']==1){   //当时fenye请求时page参数才有效
+            $page = (int)$_POST['page'];
+            $limit = ($page-1)*$pagesize;
+        }
+
         //生成查询条件
         $userlist_ = array();
         if ($this->_userinfo['roleid'] != 1) {
@@ -77,10 +86,16 @@ class Main extends Adminbase
         }
         $searchwhere['t'] = $date;
 
-        $vblist = $this->Vb->getList($where);
-        $this->assign('vblist', $vblist);
-        $this->assign('userlist', $userlist_);
-        $this->assign('searchwhere', $searchwhere);
+        $vbres = $this->Vb->getList($where, "$limit,$pagesize");
+
+        $this->assign('count', $vbres['count']); //总条数
+        $this->assign('pagesize', $pagesize); //页码大小
+        $this->assign('page', $page); //当前页
+
+        $this->assign('vblist', $vbres['data']);    //VB记录
+        $this->assign('userlist', $userlist_);  //供应商列表
+        $this->assign('searchwhere', $searchwhere); //搜索条件
+        $this->assign('total', $vbres['total']);    //满足查询条件的总VB数量
         return $this->fetch();
     }
 

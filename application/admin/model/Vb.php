@@ -24,14 +24,17 @@ class Vb extends Model
      * 获取列表
      * @return type
      */
-    final public function getList($where)
+    final public function getList($where, $limit)
     {
         if(!is_array($where)){
             $where = array();
         }
 
-        $result = $this->where($where)->order(array('create_time' => 'DESC'))->select()->toArray();
-        return $result;
+        $total = $this->where($where)->order(array('create_time' => 'DESC'))->sum('vb');
+        $count = $this->where($where)->order(array('create_time' => 'DESC'))->count();
+        $list = $this->where($where)->order(array('create_time' => 'DESC'))->limit($limit)->select()->toArray();
+
+        return array('data'=>$list, 'count'=>$count, 'total'=>$total);
     }
 
     //获取代理商列表
