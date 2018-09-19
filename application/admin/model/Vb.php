@@ -30,8 +30,8 @@ class Vb extends Model
             $where = array();
         }
 
-        $total = $this->where($where)->order(array('create_time' => 'DESC'))->sum('vb');
-        $count = $this->where($where)->order(array('create_time' => 'DESC'))->count();
+        $total = $this->where($where)->sum('vb');
+        $count = $this->where($where)->count();
         $list = $this->where($where)->order(array('create_time' => 'DESC'))->limit($limit)->select()->toArray();
 
         return array('data'=>$list, 'count'=>$count, 'total'=>$total);
