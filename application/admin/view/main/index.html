@@ -56,7 +56,7 @@
                     <td>{$vo.agent_name}</td>
                     <td style="text-align: right">{$vo.vb}</td>
                     <td>{$vo.source}</td>
-                    <td>{php} echo date("Y-m-d h:i:s", $vo['create_time']) {/php}</td>
+                    <td>{php} echo date("Y-m-d H:i:s", $vo['create_time']) {/php}</td>
                     <td>
                         {if condition="$searchwhere['r'] eq 1"}
                         <a class="layui-btn layui-btn-xs" href="{:url('admin/main/edit',['id'=>$vo.id])}">编辑</a>
