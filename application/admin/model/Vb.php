@@ -30,7 +30,7 @@ class Vb extends Model
             $where = array();
         }
 
-        $result = $this->where($where)->select()->toArray();
+        $result = $this->where($where)->order('create_time')->select()->toArray();
         return $result;
     }
 

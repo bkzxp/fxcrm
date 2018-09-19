@@ -23,6 +23,13 @@ class Index extends Adminbase
     {
         $this->assign('userInfo', $this->_userinfo);
         $menulist = model("admin/Menu")->getMenuList();
+        if ($this->_userinfo['roleid'] != 1) {  //普通用户只能查询记录
+            foreach ($menulist as $key => $value){  //过滤掉管理菜单
+                if($value['menuid'] == 3 || $value['title'] == '后台管理'){
+                    unset($menulist[$key]);
+                }
+            }
+        }
         $this->assign("SUBMENU_CONFIG", json_encode($menulist));
         return $this->fetch();
     }

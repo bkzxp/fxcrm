@@ -1,8 +1,9 @@
-layui.use(['element', 'layer', 'form'], function() {
+layui.use(['element', 'layer', 'form','laydate'], function() {
     var element = layui.element,
         layer = layui.layer,
         $ = layui.jquery,
-        form = layui.form;
+        form = layui.form,
+        laydate = layui.laydate;
 
 
     /*$('[title]').hover(function() {
@@ -12,10 +13,12 @@ layui.use(['element', 'layer', 'form'], function() {
         layer.closeAll('tips')
     })*/
 
-    //通用添加
-    $(".ajax-jump").click(function() {
-        addNews('', $(this).attr('url'));
-    })
+    //常规用法
+    laydate.render({
+        elem: '#createtime1'
+    });
+
+
 
     /* 监听状态设置开关 */
     form.on('switch(switchStatus)', function(data) {
@@ -149,35 +152,5 @@ layui.use(['element', 'layer', 'form'], function() {
         return false;
     });
 
-    //添加文章
-    function addNews(edit, url) {
-        var index = layer.open({
-            title: "新增数据",
-            type: 2,
-            content: url,
-            success: function(layero, index) {
-                var body = layer.getChildFrame('body', index);
-                if (edit) {
-                    body.find(".newsName").val(edit.newsName);
-                    body.find(".abstract").val(edit.abstract);
-                    body.find(".thumbImg").attr("src", edit.newsImg);
-                    body.find("#news_content").val(edit.content);
-                    body.find(".newsStatus select").val(edit.newsStatus);
-                    body.find(".openness input[name='openness'][title='" + edit.newsLook + "']").prop("checked", "checked");
-                    body.find(".newsTop input[name='newsTop']").prop("checked", edit.newsTop);
-                    form.render();
-                }
-                setTimeout(function() {
-                    layer.tips('点击此处返回列表', '.layui-layer-setwin .layui-layer-close', {
-                        tips: 3
-                    });
-                }, 500)
-            }
-        })
-        layer.full(index);
-        //改变窗口大小时，重置弹窗的宽高，防止超出可视区域（如F12调出debug的操作）
-        $(window).on("resize", function() {
-            layer.full(index);
-        })
-    }
+
 });
