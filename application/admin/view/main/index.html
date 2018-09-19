@@ -5,6 +5,11 @@
         <div class="layui-form">
             <blockquote class="layui-elem-quote news_search">
                 <form class="layui-form" action="{:url('admin/main/index')}" method="post">
+                    {if condition="$searchwhere['r'] eq 1"}
+                        <div class="layui-inline">
+                            <a class="layui-btn layui-btn-sm" href="{:url('admin/main/add')}">添加VB</a>
+                        </div>
+                    {/if}
                     <div class="layui-inline">
                         <label class="layui-form-label">代理商名称</label>
                         <div class="layui-input-inline">
@@ -39,7 +44,8 @@
                     <th>代理商名称</th>
                     <th>现持有VB</th>
                     <th>来源</th>
-                    <th>创建时间</th>
+                    <th>最新操作时间</th>
+                    <th>操作</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -50,6 +56,11 @@
                     <td>{$vo.vb}</td>
                     <td>{$vo.source}</td>
                     <td>{php} echo date("Y-m-d h:i:s", $vo['create_time']) {/php}</td>
+                    <td>
+                        {if condition="$searchwhere['r'] eq 1"}
+                        <a class="layui-btn layui-btn-xs" href="{:url('admin/main/edit',['id'=>$vo.id])}">编辑</a>
+                        {/if}
+                    </td>
                 </tr>
                 {/volist}
                 </tbody>
