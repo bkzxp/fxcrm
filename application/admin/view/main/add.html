@@ -1,0 +1,41 @@
+{extend name="index_layout"/}
+{block name="main"}
+<div class="layui-card">
+	<div class="layui-card-header">添加VB</div>
+    <div class="layui-card-body">
+        <form class="layui-form form-horizontal" action="{:url('admin/main/add')}" method="post">
+            <div class="layui-form-item">
+                <label class="layui-form-label">代理商名称</label>
+                <div class="layui-input-inline">
+                    <select name="userno" lay-filter="userno">
+                        {volist name="agents" id="vo"}
+                        <option value="{$vo['userno']}">{$vo['userno'].'__'.$vo['nickname']}</option>
+                        {/volist}
+                    </select>
+                </div>
+             </div>
+             <div class="layui-form-item">
+                <label class="layui-form-label">持有VB</label>
+                <div class="layui-input-inline">
+                    <input type="text" name="vb" lay-verify="number" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+         <div class="layui-form-item">
+                <label class="layui-form-label">来源</label>
+                <div class="layui-input-inline">
+                    <input type="text" name="source" lay-verify="source" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <div class="layui-input-block">
+                    <button class="layui-btn ajax-post" lay-submit="" lay-filter="*" target-form="form-horizontal">立即提交</button>
+                    <a class="layui-btn layui-btn-normal" href="{:url('admin/main/index')}">返回</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+{/block}
+{block name="script"}
+<script type="text/javascript" src="__STATIC__/admin/js/common.js"></script>
+{/block}

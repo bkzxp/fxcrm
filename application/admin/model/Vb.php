@@ -30,50 +30,73 @@ class Vb extends Model
             $where = array();
         }
 
-        $result = $this->where($where)->order('create_time')->select()->toArray();
+        $result = $this->where($where)->order(array('create_time' => 'DESC'))->select()->toArray();
         return $result;
     }
 
-    /**
-     * 添加后台菜单
-     */
-    public function add($data)
-    {
-        $validate = new \app\admin\validate\Menu;
-        $result = $validate->scene('add')->check($data);
-        if (!$result) {
-            $this->error = $validate->getError();
-            return false;
-        }
-        return $this->allowField(true)->save($data) !== false ? true : false;
+    //获取代理商列表
+    public function getAgents(){
+        $agents = Db::name("admin")->where('roleid','eq',4)->where('status','>',0)->order(array('userno' => 'ASC'))->select();
+        return $agents;
     }
 
     /**
-     * 修改后台菜单
+     * 添加VB
+     * @param type $data
+     * @return boolean
      */
-    public function edit($data)
+    public function createVb($post)
     {
-        $validate = new \app\admin\validate\Menu;
-        $result = $validate->scene('edit')->check($data);
-        if (!$result) {
-            $this->error = $validate->getError();
+        if (empty($post)) {
+            $this->error = '没有数据！';
             return false;
         }
-        return $this->allowField(true)->isUpdate(true)->save($data) !== false ? true : false;
+        $data['userno']=$post['userno'];
+        $data['vb'] = $post['vb'];
+        
+        $agents = Db::name("admin")->where('userno','eq',$data['userno'])->limit(1)->find();
+        $data['agent_name'] = $agents['nickname'];
+        $data['uid'] = $agents['userid'];
+        $data['create_time'] = time();
+        $data['source'] = $post['source'];
+      
+        $id = $this->allowField(true)->save($data);
+        if ($id) {
+            return $id;
+        }
+        $this->error = '添加VB失败！';
+        return false;
     }
-
+    
     /**
-     * 删除菜单
+     * 编辑Vb
+     * @param [type] $data [修改数据]
+     * @return boolean
      */
-    public function del($id)
+    public function editVb($post)
     {
-        $result = $this->where(['id' => $id])->delete();
-        if ($result) {
-            return true;
-        } else {
-            $this->error = "删除失败";
+        if (empty($post) || !isset($post['id']) || !is_array($post)) {
+            $this->error = '没有修改的数据！';
             return false;
         }
+        $info = $this->where(array('id' => $post['id']))->find();
+       
+        if (empty($info)) {
+            $this->error = '该信息不存在！';
+            return false;
+        }
+        $data['id']=$post['id'];
+        $data['userno']=$post['userno'];
+        $data['vb'] = $post['vb'];
+        
+        $agents = Db::name("admin")->where('userno','eq',$data['userno'])->limit(1)->find();
+        $data['agent_name'] = $agents['nickname'];
+        $data['uid'] = $agents['userid'];
+        $data['create_time'] = time();
+        $data['source'] = $post['source'];
+        
+        $status = $this->allowField(true)->isUpdate(true)->save($data);
+        return $status !== false ? true : false;
     }
 
 }

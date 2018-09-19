@@ -60,7 +60,9 @@ class Main extends Adminbase
         if ($this->_userinfo['roleid'] != 1) {  //普通用户只能查询自己的记录
             $where[] = ['uid','eq',$this->_userinfo['userid']];
             $searchwhere['u'] = $this->_userinfo['userid'];
+            $searchwhere['r'] = 0;  //普通用户
         }else{
+            $searchwhere['r'] = 1;  //管理员
             if(isset($_POST['userid']) && $_POST['userid'] != -1){
                 $where[] = ['uid','eq',(int)$_POST['userid']];
                 $searchwhere['u'] = $_POST['userid'];
@@ -84,7 +86,49 @@ class Main extends Adminbase
 
     //添加VB
     public function add(){
+        if ($this->request->isPost()) {
+            $data = $this->request->post('');
+            $result = $this->validate($data, 'Main.add');
+            if (true !== $result) {
+                return $this->error($result);
+            }
+            if ($this->Vb->createVb($data)) {
+                $this->success("添加VB成功！", url('admin/main/index'));
+            } else {
+                $error = $this->Vb->getError();
+                $this->error($error ? $error : '添加失败！');
+            }
 
+        } else {
+            $this->assign("agents", model('admin/Vb')->getAgents());
+            return $this->fetch();
+        }
+    }
+
+    //编辑VB
+    public function edit(){
+        if ($this->request->isPost()) {
+            $data = $this->request->post('');
+            $result = $this->validate($data, 'Main.edit');
+            if (true !== $result) {
+                return $this->error($result);
+            }
+            if ($this->Vb->editVb($data)) {
+                $this->success("修改成功！", url('admin/main/index'));
+            } else {
+                $this->error($this->User->getError() ?: '修改失败！');
+            }
+        } else {
+            $id = $this->request->param('id/d');
+            $data = $this->Vb->where(array("id" => $id))->find();
+
+            if (empty($data)) {
+                $this->error('该信息不存在！');
+            }
+            $this->assign("data", $data);
+            $this->assign("agents", model('admin/Vb')->getAgents());
+            return $this->fetch();
+        }
     }
 
 }
