@@ -94,7 +94,7 @@ class AdminUser extends Model
             $this->error = '禁止对超级管理员执行该操作！';
             return false;
         }
-        if (false !== $this->where(array('userid' => $userId))->delete()) {
+        if (false !== $this->where(array('userid' => $userId))->setField('status', 0)) {
             return true;
         } else {
             $this->error = '删除失败！';
