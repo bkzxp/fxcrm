@@ -19,7 +19,7 @@ return [
     // 应用地址
     'app_host' => '',
     // 应用调试模式
-    'app_debug' => true,
+    'app_debug' => false,
     // 应用Trace
     'app_trace' => false,
     // 应用模式状态
@@ -56,9 +56,9 @@ return [
     // +----------------------------------------------------------------------
 
     // 默认模块名
-    'default_module' => 'index',
+    'default_module' => 'admin',
     // 禁止访问模块
-    'deny_module_list' => ['common'],
+    'deny_module_list' => ['common','index'],
     // 默认控制器名
     'default_controller' => 'Index',
     // 默认操作名
@@ -129,7 +129,7 @@ return [
     'exception_tmpl' => Env::get('think_path') . 'tpl/think_exception.tpl',
 
     // 错误显示信息,非调试模式有效
-    'error_message' => '页面错误！请稍后再试～',
+    'error_message' => '访问的页面不存在！请访问网站首页～',
     // 显示错误信息
     'show_error_msg' => false,
     // 异常处理handle类 留空使用 \think\exception\Handle
