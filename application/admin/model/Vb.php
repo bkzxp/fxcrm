@@ -38,7 +38,7 @@ class Vb extends Model
     }
 
     //获取代理商列表
-    public function getAgents(){
+    final public function getAgents(){
         $agents = Db::name("admin")->where('roleid','eq',4)->where('status','>',0)->order(array('userno' => 'ASC'))->select();
         return $agents;
     }
@@ -48,7 +48,7 @@ class Vb extends Model
      * @param type $data
      * @return boolean
      */
-    public function createVb($post)
+    final public function createVb($post)
     {
         if (empty($post)) {
             $this->error = '没有数据！';
@@ -76,7 +76,7 @@ class Vb extends Model
      * @param [type] $data [修改数据]
      * @return boolean
      */
-    public function editVb($post)
+    final public function editVb($post)
     {
         if (empty($post) || !isset($post['id']) || !is_array($post)) {
             $this->error = '没有修改的数据！';

@@ -44,7 +44,7 @@ class Main extends Adminbase
             $userlist_[0]['id'] = $this->_userinfo['userid'];
             $userlist_[0]['title'] = $this->_userinfo['userno'].'__'.$this->_userinfo['nickname'];
         }else{
-            $userlist = Db::name("admin")->field('userid,roleid,nickname,userno')->where(array())->order(array('userno' => 'ASC'))->select();
+            $userlist = $this->Vb->getAgents();
             if(empty($userlist)){
                 $this->error('没有查到有效的供应商！');
             }
@@ -53,9 +53,6 @@ class Main extends Adminbase
                 'title' => '全部',
             );
             foreach ($userlist as $k => $v){
-                if($v['roleid'] == 1){
-                    continue;
-                }
                 $userlist_[] = array(
                     'id' => $v['userid'],
                     'title' => $v['userno'].'__'.$v['nickname'],
