@@ -42,7 +42,11 @@ class Manager extends Adminbase
     {
         if ($this->request->isPost()) {
             $data = $this->request->post('');
-            $result = $this->validate($data, 'AdminUser.insert');
+            if($data['roleid'] == 1){
+                $result = $this->validate($data, 'AdminUser.insertadmin');
+            }else{
+                $result = $this->validate($data, 'AdminUser.insert');
+            }
             if (true !== $result) {
                 return $this->error($result);
             }
@@ -66,12 +70,16 @@ class Manager extends Adminbase
     {
         if ($this->request->isPost()) {
             $data = $this->request->post('');
-            $result = $this->validate($data, 'AdminUser.update');
+            if($data['roleid'] == 1){
+                $result = $this->validate($data, 'AdminUser.updateadmin');
+            }else{
+                $result = $this->validate($data, 'AdminUser.update');
+            }
             if (true !== $result) {
                 return $this->error($result);
             }
             if ($this->AdminUser->editManager($data)) {
-                $this->success("修改成功！");
+                $this->success("修改成功！", url('admin/manager/index'));
             } else {
                 $this->error($this->User->getError() ?: '修改失败！');
             }

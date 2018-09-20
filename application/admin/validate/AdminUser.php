@@ -22,13 +22,14 @@ class AdminUser extends Validate
     //定义验证规则
     protected $rule = [
         'username' => 'unique:admin|require|alphaDash|length:3,15',
-        'password' => 'require|length:4,20|confirm',
-        'email' => 'email',
+        'nickname' => 'unique:admin|require',
+        'password' => 'require|length:6,20|confirm',
         'roleid' => 'require',
-
     ];
     //定义验证提示
     protected $message = [
+        'nickname.unique' => '代理商名称已经存在！',
+        'nickname.require' => '代理商名称不能为空！',
         'username.unique' => '用户名已经存在！',
         'username.require' => '用户名不能为空！',
         'username.alphaDash' => '用户名格式不正确！',
@@ -36,8 +37,7 @@ class AdminUser extends Validate
         'password.require' => '密码不能为空！',
         'password.length' => '密码长度4-20位！',
         'password.confirm' => '两次输入的密码不一样！',
-        'email.email' => '邮箱地址有误！',
-        'roleid.require' => '请选择一个权限组！',
+        'roleid.require' => '请选择一个角色！',
 
     ];
 
@@ -49,17 +49,23 @@ class AdminUser extends Validate
             ->remove('password', 'confirm');
     }
 
-    // 登录验证场景定义
+    //编辑场景
     public function sceneUpdate()
     {
-        return $this->only(['username', 'password', 'email', 'roleid'])
+        return $this->only(['nickname', 'username', 'password', 'roleid'])
+            ->remove('password', 'require');
+    }
+    //编辑管理员
+    public function sceneUpdateAdmin()
+    {
+        return $this->only(['username', 'password', 'roleid'])
             ->remove('password', 'require');
     }
 
     //定义验证场景
     protected $scene = [
-        'insert' => ['username', 'password', 'email', 'roleid'],
-
+        'insert' => ['nickname', 'username', 'password', 'roleid'],
+        'insertadmin' => ['username', 'password', 'roleid'],
     ];
 
 }
