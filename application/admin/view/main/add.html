@@ -7,9 +7,9 @@
             <div class="layui-form-item">
                 <label class="layui-form-label">代理商名称</label>
                 <div class="layui-input-inline">
-                    <select name="userno" lay-filter="userno">
+                    <select name="userid" lay-filter="userno" lay-search="">
                         {volist name="agents" id="vo"}
-                        <option value="{$vo['userno']}">{$vo['userno'].'__'.$vo['nickname']}</option>
+                        <option value="{$vo['userid']}">{$vo['nickname'].'__'.$vo['username']}</option>
                         {/volist}
                     </select>
                 </div>

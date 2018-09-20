@@ -32,14 +32,14 @@ class Vb extends Model
 
         $total = $this->where($where)->sum('vb');
         $count = $this->where($where)->count();
-        $list = $this->where($where)->order(array('create_time' => 'DESC'))->limit($limit)->select()->toArray();
+        $list = $this->alias('a')->join('admin b','b.userid=a.uid')->where($where)->order(array('create_time' => 'DESC'))->limit($limit)->select()->toArray();
 
         return array('data'=>$list, 'count'=>$count, 'total'=>$total);
     }
 
     //获取代理商列表
     final public function getAgents(){
-        $agents = Db::name("admin")->where('roleid','eq',4)->where('status','>',0)->order(array('userno' => 'ASC'))->select();
+        $agents = Db::name("admin")->where('roleid','eq',4)->where('status','>',0)->select();
         return $agents;
     }
 
@@ -54,10 +54,10 @@ class Vb extends Model
             $this->error = '没有数据！';
             return false;
         }
-        $data['userno']=$post['userno'];
+        $data['userid']=$post['userid'];
         $data['vb'] = $post['vb'];
         
-        $agents = Db::name("admin")->where('userno','eq',$data['userno'])->limit(1)->find();
+        $agents = Db::name("admin")->where('userid','eq',$data['userid'])->limit(1)->find();
         $data['agent_name'] = $agents['nickname'];
         $data['uid'] = $agents['userid'];
         $data['create_time'] = time();
@@ -89,10 +89,10 @@ class Vb extends Model
             return false;
         }
         $data['id']=$post['id'];
-        $data['userno']=$post['userno'];
+        $data['uid']=$post['userid'];
         $data['vb'] = $post['vb'];
         
-        $agents = Db::name("admin")->where('userno','eq',$data['userno'])->limit(1)->find();
+        $agents = Db::name("admin")->where('userid','eq',$data['uid'])->limit(1)->find();
         $data['agent_name'] = $agents['nickname'];
         $data['uid'] = $agents['userid'];
         $data['create_time'] = time();

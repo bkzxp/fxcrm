@@ -6,6 +6,12 @@
         <form class="layui-form form-horizontal" action="{:url('admin/manager/edit')}" method="post">
             <input type="hidden" name="userid" value="{$data.userid}" />
             <div class="layui-form-item">
+                <label class="layui-form-label">代理商名称</label>
+                <div class="layui-input-inline">
+                    <input type="text" name="nickname" lay-verify="nickname" autocomplete="off" placeholder="代理商名称" class="layui-input"  value="{$data.nickname}">
+                </div>
+            </div>
+            <div class="layui-form-item">
                 <label class="layui-form-label">用户名</label>
                 <div class="layui-input-inline">
                     <input type="text" name="username" lay-verify="username" autocomplete="off" placeholder="用户名" class="layui-input" value="{$data.username}">
@@ -34,18 +40,6 @@
                         <option value="{$vo['id']}" {eq name="vo.id" value="$data.roleid" }selected{/eq}>{$vo['title']}</option>
                         {/volist}
                     </select>
-                </div>
-            </div>
-            <div class="layui-form-item">
-                <label class="layui-form-label">代理商名称</label>
-                <div class="layui-input-inline">
-                    <input type="text" name="nickname" lay-verify="nickname" autocomplete="off" placeholder="代理商名称" class="layui-input"  value="{$data.nickname}">
-                </div>
-            </div>
-            <div class="layui-form-item">
-                <label class="layui-form-label">代理商编号</label>
-                <div class="layui-input-inline">
-                    <input type="text" name="userno" lay-verify="nickname" autocomplete="off" placeholder="代理商编号" class="layui-input"  value="{$data.userno}">
                 </div>
             </div>
             <div class="layui-form-item">

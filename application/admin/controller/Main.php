@@ -42,7 +42,7 @@ class Main extends Adminbase
         $userlist_ = array();
         if ($this->_userinfo['roleid'] != 1) {
             $userlist_[0]['id'] = $this->_userinfo['userid'];
-            $userlist_[0]['title'] = $this->_userinfo['userno'].'__'.$this->_userinfo['nickname'];
+            $userlist_[0]['title'] = $this->_userinfo['nickname'];
         }else{
             $userlist = $this->Vb->getAgents();
             if(empty($userlist)){
@@ -50,12 +50,12 @@ class Main extends Adminbase
             }
             $userlist_[] = array(
                 'id' => '-1',
-                'title' => '全部',
+                'title' => '全部-可输入选择',
             );
             foreach ($userlist as $k => $v){
                 $userlist_[] = array(
                     'id' => $v['userid'],
-                    'title' => $v['userno'].'__'.$v['nickname'],
+                    'title' => $v['nickname'].'__'.$v['username'],
                 );
             }
         }

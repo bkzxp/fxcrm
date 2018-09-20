@@ -13,7 +13,7 @@
                     <div class="layui-inline">
                         <label class="layui-form-label">代理商名称</label>
                         <div class="layui-input-inline">
-                            <select name="userid" lay-filter="userid">
+                            <select name="userid" lay-filter="userid" lay-search="">
                                 {volist name="userlist" id="vo"}
                                     {if condition="$vo['id'] eq $searchwhere['u']"}
                                         <option value="{$vo['id']}" selected="selected">{$vo['title']}</option>
@@ -42,8 +42,9 @@
             <table class="layui-table">
                 <thead>
                 <tr>
-                    <th>代理商编号</th>
+                    <th>记录id</th>
                     <th>代理商名称</th>
+                    <th>代理商账号</th>
                     <th>现持有VB</th>
                     <th>来源</th>
                     <th>最新操作时间</th>
@@ -52,8 +53,9 @@
                 </thead>
                 {volist name="vblist" id="vo"}
                 <tr>
-                    <td>{$vo.userno}</td>
+                    <td>{$vo.id}</td>
                     <td>{$vo.agent_name}</td>
+                    <td>{$vo.username}</td>
                     <td style="text-align: right">{$vo.vb}</td>
                     <td>{$vo.source}</td>
                     <td>{php} echo date("Y-m-d H:i:s", $vo['create_time']) {/php}</td>
@@ -65,8 +67,8 @@
                 </tr>
                 {/volist}
                 <thead>
-                    <td>满足查询条件的所有记录的VB总计</td>
-                    <td colspan="5">{$total}</td>
+                    <td colspan="3">满足查询条件的所有记录的VB总计</td>
+                    <td colspan="4">{$total}</td>
                 </thead>
                 </tbody>
             </table>

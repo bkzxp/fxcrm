@@ -16,7 +16,6 @@
                         <th>登录名</th>
                         <th>所属角色</th>
                         <th>代理商名称</th>
-                        <th>代理商编号</th>
                         <th>最后登录IP</th>
                         <th>最后登录时间</th>
                     </tr>
@@ -32,7 +31,6 @@
                         <td>{$vo.username}</td>
                         <td>{php} echo model('admin/AuthGroup')->getRoleIdName($vo['roleid']) {/php}</td>
                         <td>{$vo.nickname}</td>
-                        <td>{$vo.userno}</td>
                         <td>{php} echo $vo['last_login_ip'] ? long2ip($vo['last_login_ip']) : '--' {/php}</td>
                         <td>{php} echo $vo['last_login_time'] ? time_format($vo['last_login_time']) : '--' {/php}</td>
                     </tr>
