@@ -212,7 +212,8 @@ class AdminUser extends Model
      */
     public function isAdministrator()
     {
-        $userInfo = $this->getUserInfo($this->isLogin());
+        $uid = (int)$this->isLogin();
+        $userInfo = $this->getUserInfo($uid);
         if (!empty($userInfo) && $userInfo['roleid'] == self::administratorRoleId) {
             return true;
         }
