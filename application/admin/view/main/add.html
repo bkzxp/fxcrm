@@ -1,7 +1,7 @@
 {extend name="index_layout"/}
 {block name="main"}
 <div class="layui-card">
-	<div class="layui-card-header">添加VB</div>
+	<div class="layui-card-header">添加VB记录</div>
     <div class="layui-card-body">
         <form class="layui-form form-horizontal" action="{:url('admin/main/add')}" method="post">
             <div class="layui-form-item">
@@ -13,18 +13,29 @@
                         {/volist}
                     </select>
                 </div>
-             </div>
-             <div class="layui-form-item">
-                <label class="layui-form-label">持有VB</label>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">操作类型</label>
+                <div class="layui-input-block">
+                    <input type="radio" name="type" value="1" title="增加VB" checked="checked">
+                    <input type="radio" name="type" value="-1" title="VB扣款">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">VB数量</label>
                 <div class="layui-input-inline">
                     <input type="text" name="vb" lay-verify="number" autocomplete="off" class="layui-input">
                 </div>
             </div>
-         <div class="layui-form-item">
-                <label class="layui-form-label">来源</label>
-                <div class="layui-input-inline">
-                    <input type="text" name="source" lay-verify="source" autocomplete="off" class="layui-input">
-                </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">改动缘由</label>
+                    <div class="layui-input-inline">
+                     <select name="source" lay-filter="source" lay-search="">
+                         {volist name="sourcelist" id="vo"}
+                         <option value="{$vo}">{$vo}</option>
+                         {/volist}
+                     </select>
+                    </div>
             </div>
             <div class="layui-form-item">
                 <div class="layui-input-block">

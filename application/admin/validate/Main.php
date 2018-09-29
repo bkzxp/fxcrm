@@ -11,7 +11,7 @@ class Main extends Validate{
 
     //定义验证提示
     protected $message = [
-        'vb.number' => 'VB必须是整数',
+        'vb.number' => 'VB必须是正整数',
         'vb.require' => '所持VB不能为空',
     ];
 

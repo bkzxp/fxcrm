@@ -16,22 +16,32 @@
                     </select>
                 </div>
              </div>
-             <div class="layui-form-item">
-                <label class="layui-form-label">持有VB</label>
-                <div class="layui-input-inline">
-                    <input type="text" name="vb" lay-verify="number" autocomplete="off" class="layui-input"  value="{$data.vb}">
+            <div class="layui-form-item">
+                <label class="layui-form-label">操作类型</label>
+                <div class="layui-input-block">
+                    <input type="radio" name="type" value="1" title="增加VB" {if condition="$data.vb > 0"}checked="checked"{/if}>
+                    <input type="radio" name="type" value="-1" title="VB扣款" {if condition="$data.vb < 0"}checked="checked"{/if}>
                 </div>
             </div>
-         <div class="layui-form-item">
-                <label class="layui-form-label">来源</label>
+             <div class="layui-form-item">
+                <label class="layui-form-label">VB数量</label>
                 <div class="layui-input-inline">
-                    <input type="text" name="source" lay-verify="source" autocomplete="off" class="layui-input" value="{$data.source}">
+                    <input type="text" name="vb" lay-verify="number" autocomplete="off" class="layui-input"  value="{$data.vb|abs}">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">改动缘由</label>
+                <div class="layui-input-inline">
+                    <select name="source" lay-filter="source" lay-search="">
+                        {volist name="sourcelist" id="vo"}
+                        <option value="{$vo}" {eq name="vo" value="$data.source" }selected{/eq}>{$vo}</option>
+                        {/volist}
+                    </select>
                 </div>
             </div>
             <div class="layui-form-item">
                 <div class="layui-input-block">
-                    <a class="layui-btn layui-btn-normal" href="{:url('admin/main/index')}">记录不可编辑</a>
-                    <a class="layui-btn layui-btn-normal" href="{:url('admin/main/index')}">返回</a>
+                    <a class="layui-btn layui-btn-normal" href="{:url('admin/main/index')}">记录不可编辑，点击返回</a>
                 </div>
             </div>
         </form>

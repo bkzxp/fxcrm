@@ -24,6 +24,13 @@ class Main extends Adminbase
     {
         parent::initialize();
         $this->Vb = new Vb_Model;
+        $this->source = array(
+            '来源1',
+            '来源2',
+            '来源3',
+            '来源4',
+            '来源5',
+        );
     }
 
     //欢迎首页
@@ -82,6 +89,17 @@ class Main extends Adminbase
             $where[] = ['create_time','between', "$star,$end"];
         }
         $searchwhere['t'] = $date;
+        $searchwhere['p'] = 0;
+        if(isset($_POST['type']) && $_POST['type'] != 0){
+            $type = $_POST['type'];
+            if($type == 1){
+                $where[] = ['vb','>', "0"];
+                $searchwhere['p'] = $type;
+            }elseif ($type == -1){
+                $where[] = ['vb','<', "0"];
+                $searchwhere['p'] = $type;
+            }
+        }
 
         $vbres = $this->Vb->getList($where, "$limit,$pagesize");
 
@@ -104,6 +122,13 @@ class Main extends Adminbase
             if (true !== $result) {
                 return $this->error($result);
             }
+            if($data['type'] == 1){
+                //$data['vb'] = $data['vb'];    /不用操作
+            }elseif ($data['type'] == -1){
+                $data['vb'] = 0 - $data['vb'];  //取反
+            }else{
+                return $this->error('操作类型未选择');
+            }
             if ($this->Vb->createVb($data)) {
                 $this->success("添加VB成功！", url('admin/main/index'));
             } else {
@@ -112,6 +137,7 @@ class Main extends Adminbase
             }
 
         } else {
+            $this->assign("sourcelist", $this->source);
             $this->assign("agents", model('admin/Vb')->getAgents());
             return $this->fetch();
         }
@@ -140,6 +166,7 @@ class Main extends Adminbase
                 $this->error('该信息不存在！');
             }
             $this->assign("data", $data);
+            $this->assign("sourcelist", $this->source);
             $this->assign("agents", model('admin/Vb')->getAgents());
             return $this->fetch();
         }

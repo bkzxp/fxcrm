@@ -7,7 +7,7 @@
                 <form class="layui-form" action="{:url('admin/main/index')}" method="post" id="form">
                     {if condition="$searchwhere['r'] eq 1"}
                         <div class="layui-inline">
-                            <a class="layui-btn layui-btn-sm" href="{:url('admin/main/add')}">添加VB</a>
+                            <a class="layui-btn layui-btn-sm" href="{:url('admin/main/add')}">添加VB记录</a>
                         </div>
                     {/if}
                     <div class="layui-inline">
@@ -21,6 +21,16 @@
                                         <option value="{$vo['id']}">{$vo['title']}</option>
                                     {/if}
                                 {/volist}
+                            </select>
+                        </div>
+                    </div>
+                    <div class="layui-inline">
+                        <label class="layui-form-label">操作类型</label>
+                        <div class="layui-input-inline">
+                            <select name="type" lay-filter="type">
+                                <option value="0">不限</option>
+                                <option value="1" {if condition="$searchwhere['p'] eq 1"}selected="selected"{/if}>增加VB</option>
+                                <option value="-1" {if condition="$searchwhere['p'] eq -1"}selected="selected"{/if}>VB扣款</option>
                             </select>
                         </div>
                     </div>
@@ -45,8 +55,9 @@
                     <th>记录id</th>
                     <th>代理商名称</th>
                     <th>代理商账号</th>
-                    <th>现持有VB</th>
-                    <th>来源</th>
+                    <th>操作类型</th>
+                    <th>VB</th>
+                    <th>改动缘由</th>
                     <th>最新操作时间</th>
                     <th>操作</th>
                 </tr>
@@ -56,18 +67,19 @@
                     <td>{$vo.id}</td>
                     <td>{$vo.agent_name}</td>
                     <td>{$vo.username}</td>
-                    <td style="text-align: right">{$vo.vb}</td>
+                    <td>{if condition="$vo.vb > 0"}增加VB{elseif condition="$vo.vb < 0"/}VB扣款{/if}</td>
+                    <td style="text-align: right">{$vo.vb|abs}</td>
                     <td>{$vo.source}</td>
                     <td>{php} echo date("Y-m-d H:i:s", $vo['create_time']) {/php}</td>
                     <td>
                         {if condition="$searchwhere['r'] eq 1"}
-                        <a class="layui-btn layui-btn-xs" href="{:url('admin/main/edit',['id'=>$vo.id])}">编辑</a>
+                        <a class="layui-btn layui-btn-xs" href="{:url('admin/main/edit',['id'=>$vo.id])}">查看</a>
                         {/if}
                     </td>
                 </tr>
                 {/volist}
                 <thead>
-                    <td colspan="3">满足查询条件的所有记录的VB总计</td>
+                    <td colspan="4">满足查询条件的所有记录的VB总计</td>
                     <td colspan="4">{$total}</td>
                 </thead>
                 </tbody>
