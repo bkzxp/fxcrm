@@ -120,6 +120,8 @@ class Main extends Adminbase
     //编辑VB
     public function edit(){
         if ($this->request->isPost()) {
+            $this->success("VB记录不可编辑！", url('admin/main/index'));
+            exit();
             $data = $this->request->post('');
             $result = $this->validate($data, 'Main.edit');
             if (true !== $result) {
