@@ -136,7 +136,7 @@ class Main extends Adminbase
         return $this->fetch();
     }
 
-    //添加VB
+    //添加VB记录
     public function add(){
         if ($this->request->isPost()) {
             $data = $this->request->post('');
@@ -152,7 +152,7 @@ class Main extends Adminbase
                 return $this->error('操作类型未选择');
             }
             if ($this->Vb->createVb($data)) {
-                $this->success("添加VB成功！", url('admin/main/index'));
+                $this->success("添加VB记录成功！", url('admin/main/index'));
             } else {
                 $error = $this->Vb->getError();
                 $this->error($error ? $error : '添加失败！');
@@ -165,7 +165,7 @@ class Main extends Adminbase
         }
     }
 
-    //编辑VB
+    //编辑VB/当前不支持编辑，若要支持则需增加“编辑后更新代理商表的VB值”
     public function edit(){
         if ($this->request->isPost()) {
             $this->success("VB记录不可编辑！", url('admin/main/index'));

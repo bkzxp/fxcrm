@@ -70,6 +70,9 @@ class Vb extends Model
       
         $id = $this->allowField(true)->save($data);
         if ($id) {
+            $sum = $this->where(array('uid'=>$agents['userid']))->sum('vb');
+            $admin_model = new AdminUser();
+            $admin_model->where(array('userid'=>$agents['userid']))->update(array('vbamount'=>$sum));
             return $id;
         }
         $this->error = '添加VB失败！';
