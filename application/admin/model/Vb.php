@@ -21,26 +21,31 @@ class Vb extends Model
 {
 
     /**
-     * 获取列表
+     * 获取VB列表
      * @return type
      */
-    final public function getList($where, $limit)
-    {
+    final public function getList($where){
         if(!is_array($where)){
             $where = array();
         }
 
-        $total = $this->where($where)->sum('vb');
-        $count = $this->where($where)->count();
-        $list = $this->alias('a')->join('admin b','b.userid=a.uid')->where($where)->order(array('create_time' => 'DESC'))->limit($limit)->select()->toArray();
-
-        return array('data'=>$list, 'count'=>$count, 'total'=>$total);
+        $list = $this->where($where)->order(array('create_time' => 'DESC'))->select()->toArray();
+        return array('data'=>$list);
     }
 
     //获取代理商列表
     final public function getAgents(){
         $agents = Db::name("admin")->where('roleid','eq',4)->where('status','>',0)->select();
         return $agents;
+    }
+
+    //分页获取代理商VB列表
+    final public function getAgentsList($where, $limit){
+        $where[] = ['roleid','eq',4];
+        $where[] = ['status','>',0];
+        $count = Db::name("admin")->where($where)->count();
+        $list = Db::name("admin")->where($where)->order(array('userid' => 'ASC'))->limit($limit)->select();
+        return array('data'=>$list, 'count'=>$count);
     }
 
     /**

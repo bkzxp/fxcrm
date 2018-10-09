@@ -71,37 +71,39 @@ class Main extends Adminbase
         $searchwhere['u'] = -1;
         $where = array();
         if ($this->_userinfo['roleid'] != 1) {  //普通用户只能查询自己的记录
-            $where[] = ['uid','eq',$this->_userinfo['userid']];
+            $where[] = ['userid','eq',$this->_userinfo['userid']];
             $searchwhere['u'] = $this->_userinfo['userid'];
             $searchwhere['r'] = 0;  //普通用户
         }else{
             $searchwhere['r'] = 1;  //管理员
             if(isset($_POST['userid']) && $_POST['userid'] != -1){
-                $where[] = ['uid','eq',(int)$_POST['userid']];
+                $where[] = ['userid','eq',(int)$_POST['userid']];
                 $searchwhere['u'] = $_POST['userid'];
             }
         }
         $date = '';
-        if(isset($_POST['createtime']) && $_POST['createtime']){
-            $date = $_POST['createtime'];
-            $star = strtotime($date);
-            $end = $star+86399;
-            $where[] = ['create_time','between', "$star,$end"];
-        }
+        //列表改版，取消掉创建时间查询
+//        if(isset($_POST['createtime']) && $_POST['createtime']){
+//            $date = $_POST['createtime'];
+//            $star = strtotime($date);
+//            $end = $star+86399;
+//            $where[] = ['create_time','between', "$star,$end"];
+//        }
         $searchwhere['t'] = $date;
         $searchwhere['p'] = 0;
-        if(isset($_POST['type']) && $_POST['type'] != 0){
-            $type = $_POST['type'];
-            if($type == 1){
-                $where[] = ['vb','>', "0"];
-                $searchwhere['p'] = $type;
-            }elseif ($type == -1){
-                $where[] = ['vb','<', "0"];
-                $searchwhere['p'] = $type;
-            }
-        }
+        //列表改版，取消掉操作类型查询
+//        if(isset($_POST['type']) && $_POST['type'] != 0){
+//            $type = $_POST['type'];
+//            if($type == 1){
+//                $where[] = ['vb','>', "0"];
+//                $searchwhere['p'] = $type;
+//            }elseif ($type == -1){
+//                $where[] = ['vb','<', "0"];
+//                $searchwhere['p'] = $type;
+//            }
+//        }
 
-        $vbres = $this->Vb->getList($where, "$limit,$pagesize");
+        $vbres = $this->Vb->getAgentsList($where, "$limit,$pagesize");
 
         $this->assign('count', $vbres['count']); //总条数
         $this->assign('pagesize', $pagesize); //页码大小
@@ -110,7 +112,27 @@ class Main extends Adminbase
         $this->assign('vblist', $vbres['data']);    //VB记录
         $this->assign('userlist', $userlist_);  //供应商列表
         $this->assign('searchwhere', $searchwhere); //搜索条件
-        $this->assign('total', $vbres['total']);    //满足查询条件的总VB数量
+        return $this->fetch();
+    }
+
+    //代理商VB记录明细
+    public function info(){
+        //响应查询请求
+        $where = array();
+        if ($this->_userinfo['roleid'] != 1) {  //普通用户只能查询自己的记录
+            $where[] = ['uid','eq',$this->_userinfo['id']];
+        }else{
+            $id = $this->request->param('id/d');
+            if($id){
+                $where[] = ['uid','eq',$id];
+            }
+        }
+        if(empty($where)){  //当条件不符合时
+            $where[] = ['uid','eq',0];
+        }
+
+        $vbres = $this->Vb->getList($where);
+        $this->assign('vblist', $vbres['data']);    //VB记录
         return $this->fetch();
     }
 

@@ -24,22 +24,22 @@
                             </select>
                         </div>
                     </div>
-                    <div class="layui-inline">
-                        <label class="layui-form-label">操作类型</label>
-                        <div class="layui-input-inline">
-                            <select name="type" lay-filter="type">
-                                <option value="0">不限</option>
-                                <option value="1" {if condition="$searchwhere['p'] eq 1"}selected="selected"{/if}>增加VB</option>
-                                <option value="-1" {if condition="$searchwhere['p'] eq -1"}selected="selected"{/if}>VB扣款</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="layui-inline">
-                        <label class="layui-form-label">创建时间</label>
-                        <div class="layui-input-inline">
-                            <input type="text" name="createtime" readonly="readonly" value="{$searchwhere.t}" class="layui-input" id="createtime1" placeholder="yyyy-MM-dd">
-                        </div>
-                    </div>
+                    <!--<div class="layui-inline">-->
+                        <!--<label class="layui-form-label">操作类型</label>-->
+                        <!--<div class="layui-input-inline">-->
+                            <!--<select name="type" lay-filter="type">-->
+                                <!--<option value="0">不限</option>-->
+                                <!--<option value="1" {if condition="$searchwhere['p'] eq 1"}selected="selected"{/if}>增加VB</option>-->
+                                <!--<option value="-1" {if condition="$searchwhere['p'] eq -1"}selected="selected"{/if}>VB扣款</option>-->
+                            <!--</select>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="layui-inline">-->
+                        <!--<label class="layui-form-label">创建时间</label>-->
+                        <!--<div class="layui-input-inline">-->
+                            <!--<input type="text" name="createtime" readonly="readonly" value="{$searchwhere.t}" class="layui-input" id="createtime1" placeholder="yyyy-MM-dd">-->
+                        <!--</div>-->
+                    <!--</div>-->
                     <div class="layui-inline">
                         <div class="layui-input-inline">
                             <button class="layui-btn layui-btn-sm" id="search" lay-submit="" lay-filter="demo1">查询</button>
@@ -52,36 +52,24 @@
             <table class="layui-table">
                 <thead>
                 <tr>
-                    <th>记录id</th>
+                    <th>代理商id</th>
                     <th>代理商名称</th>
                     <th>代理商账号</th>
-                    <th>操作类型</th>
-                    <th>VB</th>
-                    <th>改动缘由</th>
-                    <th>最新操作时间</th>
+                    <th>持有VB</th>
                     <th>操作</th>
                 </tr>
                 </thead>
                 {volist name="vblist" id="vo"}
                 <tr>
-                    <td>{$vo.id}</td>
-                    <td>{$vo.agent_name}</td>
+                    <td>{$vo.userid}</td>
+                    <td>{$vo.nickname}</td>
                     <td>{$vo.username}</td>
-                    <td>{if condition="$vo.vb > 0"}增加VB{elseif condition="$vo.vb < 0"/}VB扣款{/if}</td>
-                    <td style="text-align: right">{$vo.vb|abs}</td>
-                    <td>{$vo.source}</td>
-                    <td>{php} echo date("Y-m-d H:i:s", $vo['create_time']) {/php}</td>
+                    <td style="text-align: right">{$vo.vbamount}</td>
                     <td>
-                        {if condition="$searchwhere['r'] eq 1"}
-                        <a class="layui-btn layui-btn-xs" href="{:url('admin/main/edit',['id'=>$vo.id])}">查看</a>
-                        {/if}
+                        <button class="layui-btn layui-btn-xs vbinfo" data-url="{:url('admin/main/info',['id'=>$vo.userid])}">操作明细</button>
                     </td>
                 </tr>
                 {/volist}
-                <thead>
-                    <td colspan="4">满足查询条件的所有记录的VB总计</td>
-                    <td colspan="4">{$total}</td>
-                </thead>
                 </tbody>
             </table>
             <div style="text-align: right" id="fenye"></div>
@@ -215,6 +203,20 @@
                 }
             });
             return false;
+        });
+
+        $(".vbinfo").on('click', function (){
+            var url = $(this).attr('data-url');
+            if(url){
+                layer.open({
+                    type: 2,
+                    title: 'VB详情',
+                    shadeClose: true,
+                    shade: 0.8,
+                    area: ['70%', '90%'],
+                    content: url
+                });
+            }
         });
 
 

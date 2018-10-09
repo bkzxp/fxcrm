@@ -1,0 +1,34 @@
+{extend name="index_layout"/}
+{block name="main"}
+<div class="layui-card">
+    <div class="layui-card-body">
+        <div class="layui-form">
+            <table class="layui-table">
+                <thead>
+                <tr>
+                    <th>记录id</th>
+                    <th>操作类型</th>
+                    <th>VB</th>
+                    <th>改动缘由</th>
+                    <th>最新操作时间</th>
+                </tr>
+                </thead>
+                {volist name="vblist" id="vo"}
+                <tr>
+                    <td>{$vo.id}</td>
+                    <td>{if condition="$vo.vb > 0"}增加VB{elseif condition="$vo.vb < 0"/}VB扣款{/if}</td>
+                    <td style="text-align: right">{$vo.vb|abs}</td>
+                    <td>{$vo.source}</td>
+                    <td>{php} echo date("Y-m-d H:i:s", $vo['create_time']) {/php}</td>
+                </tr>
+                {/volist}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{/block}
+
+{block name="script"}
+<script type="text/javascript" src="__STATIC__/admin/js/common.js"></script>
+{/block}
