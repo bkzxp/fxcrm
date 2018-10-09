@@ -120,7 +120,7 @@ class Main extends Adminbase
         //响应查询请求
         $where = array();
         if ($this->_userinfo['roleid'] != 1) {  //普通用户只能查询自己的记录
-            $where[] = ['uid','eq',$this->_userinfo['id']];
+            $where[] = ['uid','eq',$this->_userinfo['userid']];
         }else{
             $id = $this->request->param('id/d');
             if($id){
