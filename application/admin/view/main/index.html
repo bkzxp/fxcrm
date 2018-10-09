@@ -64,7 +64,13 @@
                     <td>{$vo.userid}</td>
                     <td>{$vo.nickname}</td>
                     <td>{$vo.username}</td>
-                    <td style="text-align: right">{$vo.vbamount}</td>
+
+                    {if condition="$vo['vbamount'] lt 0"}
+                    <td style="text-align: right;background-color: #009688;">{$vo.vbamount}</td>
+                    {else/}
+                    <td style="text-align: right;">{$vo.vbamount}</td>
+                    {/if}
+
                     <td>
                         <button class="layui-btn layui-btn-xs vbinfo" data-url="{:url('admin/main/info',['id'=>$vo.userid])}">操作明细</button>
                     </td>
